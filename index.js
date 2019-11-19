@@ -48,8 +48,8 @@ const createTimeOutEvent=function(obj,datestamp){
 
 
 const hoursWorkedOnDate=function(obj,workHour){
-    let hourIn=obj['timeInEvents'].find(e=>e.date==workHour);
-    let hourOut=obj['timeOutEvents'].find(e=>e.date==workHour);
+    let hourIn=obj.timeInEvents.find(e=>e.date==workHour);
+    let hourOut=obj.timeOutEvents.find(e=>e.date==workHour);
     let hourWorked=(hourOut.hour-hourIn.hour)/100;
     return hourWorked;
 }
@@ -63,20 +63,14 @@ const wagesEarnedOnDate=function(obj,date){
 
 
 const allWagesFor = function (obj) {
-    let newArr = obj.timeInEvents.map(function (e) {
-        return e.date
-    })
-
-    let payable = newArr.reduce(function (memo, d) {
-        return memo + wagesEarnedOnDate(obj,d)
-    }, 0);
+    let newArr = obj.timeInEvents.map(e=>e.date);
+    let payable = newArr.reduce((memo,d)=>memo + wagesEarnedOnDate(obj,d),0);
     return payable
 }
 
 
 const findEmployeeByFirstName =function(srcArray,firstName){
-return srcArray.find(function(name)
-{return name.firstName == firstName});
+return srcArray.find(e=>e.firstName == firstName);
 }
 
 
