@@ -55,5 +55,5 @@ const createTimeOutEvent = function (emp,time){
     }
      
     const createEmployeeRecords = function(emp){
-        return emp.map(e => createEmployeeRecord(e)) ;
+        return emp.map(empr => createEmployeeRecord(empr)) ;
     }
