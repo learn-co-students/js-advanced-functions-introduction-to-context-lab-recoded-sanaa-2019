@@ -17,29 +17,19 @@ let Employ={
                     newArr.push(createEmployeeRecord(element))
 
                 })
-                // console.log(newArr);
+              
             return newArr
-
-        }
-
-        function createTimeInEvent(object, timeIn) {
+ }
+function createTimeInEvent(object, timeIn) {
             let splittedTime = timeIn.split(" ");
-
-            let newEvent = {
+let newEvent = {
                 type: "TimeIn",
                 hour: parseInt(splittedTime[1]),
                 date: splittedTime[0]
-
-            }
-
+ }
             object.timeInEvents.push(newEvent)
-            return object
-        }
-
-
-
-
-        function createTimeOutEvent(object, timeOut) {
+            return object }
+   function createTimeOutEvent(object, timeOut) {
             let splittedTime = timeOut.split(" ");
 
             let newEvent = {
