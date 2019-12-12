@@ -112,15 +112,7 @@ function calculatePayroll(object) {
 let arr = [];
 let num = 0;
 
-object.forEach(item => {
-arr.push(allWagesFor(item))
-})
-
-arr.forEach(item => {
-    num += item
-   
-
-})
+object.forEach(item => {arr.push(allWagesFor(item))})
+arr.forEach(item => {num += item})
 return num
-
 } 
