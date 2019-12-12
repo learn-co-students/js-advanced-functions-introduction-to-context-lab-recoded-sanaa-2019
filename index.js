@@ -18,7 +18,7 @@ Arr.forEach(element => {
  return otherarr
  }
 function createTimeInEvent(object, timeIn) {
-            let splittedTime = timeIn.split(" ");
+let splittedTime = timeIn.split(" ");
 let newEvent = {
                 type: "TimeIn",
                 hour: parseInt(splittedTime[1]),
