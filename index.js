@@ -11,14 +11,11 @@ let Employ={
   return Employ;
 }
  function createEmployees(Arr) {
-            let otherarr = [];
-
-            Arr.forEach(element => {
-                    otherarr.push(createEmployeeRecord(element))
-
-                })
-              
-            return otherarr
+ let otherarr = [];
+Arr.forEach(element => {
+ otherarr.push(createEmployeeRecord(element))
+})
+ return otherarr
  }
 function createTimeInEvent(object, timeIn) {
             let splittedTime = timeIn.split(" ");
