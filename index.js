@@ -97,7 +97,7 @@ return other
 
 
 
-function findEmployeebyFirstName(object, fn) {
+function findEmployeeByFirstName(object, fn) {
 let name
 object.forEach(item => {
 if (item.firstName == fn) {
