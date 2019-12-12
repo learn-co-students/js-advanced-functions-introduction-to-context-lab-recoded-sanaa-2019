@@ -34,7 +34,6 @@ let newEvent = {
   date: splittedTime[0]
 
 }
-
 object.timeOutEvents.push(newEvent)
 return object
 }
