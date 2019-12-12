@@ -102,7 +102,7 @@ let name
 object.forEach(item => {
 if (item.firstName == fn) {
     name = item
-    console.log(name)
+    
   
 }
 })
