@@ -42,47 +42,47 @@ return object
 
 
 
-        function hoursWorkedOnDate(object, workHours) {
+function hoursWorkedOnDate(object, workHours) {
 
-            let In
-            let Out
-            object.timeInEvents.forEach(item => {
-                if (item.date === workHours) {
-                    In = item
-                    console.log(In)
-                }
-            })
-            object.timeOutEvents.forEach(item => {
-                if (item.date === workHours) {
-                    Out = item
-                    console.log(In)
-                }
-            })
-
-
-            let hIn = parseInt(In.hour.toString(10).slice(0, -2))
-            let hOut = parseInt(Out.hour.toString(10).slice(0, -2))
-
-            let workingHours = hOut - hIn;
-
-            return workingHours;
-        }
+let In
+let Out
+object.timeInEvents.forEach(item => {
+  if (item.date === workHours) {
+      In = item
+     
+  }
+})
+object.timeOutEvents.forEach(item => {
+if (item.date === workHours) {
+    Out = item
+   
+}
+})
 
 
+let hIn = parseInt(In.hour.toString(10).slice(0, -2))
+let hOut = parseInt(Out.hour.toString(10).slice(0, -2))
+
+let workingHours = hOut - hIn;
+
+return workingHours;
+}
 
 
-        function wagesEarnedOnDate(object, workHours) {
 
-            let In = object.timeInEvents.find(e => e.date == workHours);
-            let Out = object.timeOutEvents.find(e => e.date == workHours);
 
-            let hIn = parseInt(In.hour.toString(10).slice(0, -2))
-            let hOut = parseInt(Out.hour.toString(10).slice(0, -2))
+function wagesEarnedOnDate(object, workHours) {
 
-            let workingHours = hOut - hIn;
-            return workingHours * object.payPerHour
+  let In = object.timeInEvents.find(e => e.date == workHours);
+  let Out = object.timeOutEvents.find(e => e.date == workHours);
 
-        }
+  let hIn = parseInt(In.hour.toString(10).slice(0, -2))
+  let hOut = parseInt(Out.hour.toString(10).slice(0, -2))
+
+  let workingHours = hOut - hIn;
+  return workingHours * object.payPerHour
+
+}
 
 
 
