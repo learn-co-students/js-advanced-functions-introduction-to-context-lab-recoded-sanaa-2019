@@ -67,10 +67,6 @@ let workingHours = hOut - hIn;
 
 return workingHours;
 }
-
-
-
-
 function wagesEarnedOnDate(object, workHours) {
 
   let In = object.timeInEvents.find(e => e.date == workHours);
@@ -88,65 +84,65 @@ function wagesEarnedOnDate(object, workHours) {
 
 
 
-        function allWagesFor(object) {
+function allWagesFor(object) {
 
-            let arr = [];
-            for (const item in object.timeInEvents) {
-                let payments = wagesEarnedOnDate(object, object.timeInEvents[item].date)
-                arr.push(payments);
-            }
+let arr = [];
+for (const item in object.timeInEvents) {
+    let payments = wagesEarnedOnDate(object, object.timeInEvents[item].date)
+    arr.push(payments);
+}
 
-            let num = 0;
-            arr.forEach(item => {
-                num += item
-            })
+let num = 0;
+arr.forEach(item => {
+    num += item
+})
 
-            return num
-        }
-
-
-        function createEmployeeRecords(array) {
-            let newArr = [];
-
-            array.forEach(element => {
-                    newArr.push(createEmployeeRecord(element))
-
-                })
-                // console.log(newArr);
-            return newArr
-
-        }
+return num
+}
 
 
+function createEmployeeRecords(array) {
+let newArr = [];
 
-        function findEmployeebyFirstName(object, fn) {
-            let name
+array.forEach(element => {
+        newArr.push(createEmployeeRecord(element))
 
-            object.forEach(item => {
-                if (item.firstName == fn) {
-                    name = item
-                    console.log(name)
-                }
+    })
+    // console.log(newArr);
+return newArr
+
+}
 
 
-            })
-            return name
 
-        }
+function findEmployeebyFirstName(object, fn) {
+let name
 
-        function calculatePayroll(object) {
-            let arr = [];
-            let num = 0;
+object.forEach(item => {
+    if (item.firstName == fn) {
+        name = item
+        console.log(name)
+    }
 
-            object.forEach(item => {
-                arr.push(allWagesFor(item))
-            })
 
-            arr.forEach(item => {
-                num += item
-               
+})
+return name
 
-            })
-            return num
+}
 
-        } 
+function calculatePayroll(object) {
+let arr = [];
+let num = 0;
+
+object.forEach(item => {
+    arr.push(allWagesFor(item))
+})
+
+arr.forEach(item => {
+    num += item
+   
+
+})
+return num
+
+} 
