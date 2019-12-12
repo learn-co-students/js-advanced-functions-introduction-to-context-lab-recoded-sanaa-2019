@@ -24,8 +24,8 @@ let newEvent = {
     hour: parseInt(splittedTime[1]),
     date: splittedTime[0]
  }
-            object.timeInEvents.push(newEvent)
-            return object }
+object.timeInEvents.push(newEvent)
+return object }
    function createTimeOutEvent(object, timeOut) {
             let splittedTime = timeOut.split(" ");
 
