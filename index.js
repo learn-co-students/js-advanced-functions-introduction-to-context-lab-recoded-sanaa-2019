@@ -79,38 +79,20 @@ function wagesEarnedOnDate(object, workHours) {
   return workingHours * object.payPerHour
 
 }
-
-
-
-
-
 function allWagesFor(object) {
-
 let arr = [];
 for (const item in object.timeInEvents) {
     let payments = wagesEarnedOnDate(object, object.timeInEvents[item].date)
-    arr.push(payments);
-}
-
+    arr.push(payments);}
 let num = 0;
 arr.forEach(item => {
-    num += item
-})
-
+    num += item})
 return num
 }
-
-
-function createEmployeeRecords(array) {
-let newArr = [];
-
-array.forEach(element => {
-        newArr.push(createEmployeeRecord(element))
-
-    })
-    // console.log(newArr);
-return newArr
-
+function createEmployeeRecords(arr) {
+let other = [];
+arr.forEach(element => {other.push(createEmployeeRecord(element))})
+return other
 }
 
 
