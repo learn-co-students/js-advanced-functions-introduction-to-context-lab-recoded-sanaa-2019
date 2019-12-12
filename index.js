@@ -6,7 +6,7 @@ let Employ={
     title:Arr[2],
      payPerHour:Arr[3],
      timeInEvents:Arr[],
-     payPerHour:Arr[],
+     timeOutEvents:Arr[],
 }
   return Employ;
 }
