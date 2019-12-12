@@ -159,7 +159,7 @@ let Employ={
 
             arr.forEach(item => {
                 num += item
-                console.log(item)
+               
 
             })
             return num
