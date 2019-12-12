@@ -99,17 +99,13 @@ return other
 
 function findEmployeebyFirstName(object, fn) {
 let name
-
 object.forEach(item => {
-    if (item.firstName == fn) {
-        name = item
-        console.log(name)
-    }
-
-
+if (item.firstName == fn) {
+    name = item
+  
+}
 })
 return name
-
 }
 
 function calculatePayroll(object) {
@@ -117,7 +113,7 @@ let arr = [];
 let num = 0;
 
 object.forEach(item => {
-    arr.push(allWagesFor(item))
+arr.push(allWagesFor(item))
 })
 
 arr.forEach(item => {
