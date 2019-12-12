@@ -26,19 +26,18 @@ let newEvent = {
  }
 object.timeInEvents.push(newEvent)
 return object }
-   function createTimeOutEvent(object, timeOut) {
-            let splittedTime = timeOut.split(" ");
+function createTimeOutEvent(object, timeOut) {
+ let splittedTime = timeOut.split(" ");
+let newEvent = {
+  type: "TimeOut",
+  hour: parseInt(splittedTime[1]),
+  date: splittedTime[0]
 
-            let newEvent = {
-                type: "TimeOut",
-                hour: parseInt(splittedTime[1]),
-                date: splittedTime[0]
+}
 
-            }
-
-            object.timeOutEvents.push(newEvent)
-            return object
-        }
+object.timeOutEvents.push(newEvent)
+return object
+}
 
 
 
